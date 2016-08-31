@@ -30,7 +30,6 @@ class NullCakePricingStrategy implements PriceCalculator
     }
 }
 
-
 class CakePricingStrategyContext
 {
     public function select($type)
@@ -76,11 +75,8 @@ class Cake
 $appleCake = new Cake("apple cake", 2, new CakePricingStrategyContext);
 $appleCake->deliver();
 
-$appleCake = new Cake("cherry cake", 10, new CakePricingStrategyContext);
-$appleCake->deliver();
+$meatCake = new Cake("meat cake", 10, new CakePricingStrategyContext);
+$meatCake->deliver();
 
-$appleCake = new Cake("meat cake", 10, new CakePricingStrategyContext);
-$appleCake->deliver();
-
-$appleCake = new Cake("apple cake", 34, new CakePricingStrategyContext);
-$appleCake->deliver();
+$cherryCake = new Cake("cherry cake", 10, new CakePricingStrategyContext);
+$cherryCake->deliver();
