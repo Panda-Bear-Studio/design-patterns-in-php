@@ -16,7 +16,7 @@ class CakeMachine
             CakeMachine::$instance = new CakeMachine();
             echo "starting cake machine!" . PHP_EOL;
         } else {
-            echo "sorry, cake machine is in use!" . PHP_EOL;
+            echo "cake machine has already started" . PHP_EOL;
         }
         return CakeMachine::$instance;
     }
@@ -57,6 +57,5 @@ $bakerTom->makeCake("cheese cake");
 
 $bakerEmma = new Baker();
 $bakerEmma->startCakeMachine();
-$bakerEmma->stopCakeMachine();
-$bakerEmma->startCakeMachine();
 $bakerEmma->makeCake("pumpkin cake");
+$bakerEmma->stopCakeMachine();
